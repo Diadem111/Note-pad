@@ -1,0 +1,18 @@
+<h4>Lists of student</h4>
+    <table  border="1">
+    <tr>
+        <th>S/N</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+    </tr>
+        <tr *ngFor="let student of allStudents;let i = index ">
+            <td>{{i+1}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.password}}</td>
+            <td><button (click)="deleteStudent(i)">delete</button></td>
+      
+    </tr>
+    </table> 
+
